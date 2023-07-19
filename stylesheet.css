@@ -1,0 +1,26 @@
+html {
+    font-family:cursive;
+}
+.header {
+  background:bisque;
+  margin:auto;
+  padding:0%;
+}
+.button {
+    float: right;
+    align-items: right;
+}
+.titlefont {
+    font-size: 55px;
+    font-family:cursive;
+    color:rgb(22, 22, 22);
+    display:inline;
+  
+  }
+.img {
+  vertical-align:middle;
+
+}
+.body {
+  padding:0%;
+}
