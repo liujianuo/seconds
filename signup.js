@@ -1,37 +1,33 @@
 var fs = require('fs');
 const path = require('path');
 
-const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
+document.open();
+
+const signupform = document.getElementById("form");
+const signupbutton = document.getElementById("button");
+
 loginButton.addEventListener("click", (e) => {
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
+    const username = signupform.username.value;
+    const password = signupform.password.value;
+    const confirm = signupform.pswconfirm.value;
+    const type = signupform.type.value;
     const userdata = {};
-    var users = "/users";
-    var found = false;
-    fs.readdir(users, (err, files) => {
-        if (err) throw err;
-        var filepath;
-        files.forEach(file => {
-            if(!found){
-                filepath = path.join(users, file);
-                if(file === username){
-                    found = true;
-                    fs.readFile(filepath, 'utf8', (err, contents) => {
-                        if (err) throw err;
-                        userdata = JSON.parse(contents);
-                    });
-                }
-            }
-        });
-      });
-    e.preventDefault();
-    if(!found){
-        alert("User not found.")
+    if(confirm === password){
+        userdata.psw = password;
+        userdata.user = username;
+        var users = "/users";
+        if(!fs.existsSync(users + username)){
+            fs.writeFile(users + username, JSON.stringify(userdata), function(err){
+                if (err) throw err;
+                alert("account created successfully");
+                //send to dashboard
+            });
+        }
+        else{
+            alert("username used already.")
+        }
     }
-    else if (password === userdata.psw) {
-        //send to dashboard;        
-    } else {
-        alert("Incorrect credentials.");
+    else{
+        alert("passwords do not match.")
     }
 })
