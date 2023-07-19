@@ -20,6 +20,7 @@ loginButton.addEventListener("click", (e) => {
             fs.writeFile(users + username, JSON.stringify(userdata), function(err){
                 if (err) throw err;
                 alert("account created successfully");
+                //send to dashboard
             });
         }
         else{
