@@ -13,22 +13,30 @@ html {
   
 }
 
-.header {
+.head {
   background-color: rgb(2, 7, 40);
   padding: 0%;
   font-size: 55px;
   font-family:cursive;
+  margin-left:-10px;
+  margin-right:-10px;
+  margin-top:-10px;
   color:rgb(240, 240, 240);
   top:0;
   max-width: inherit;
-  text-align: center;
+  vertical-align: middle;
   height: fit-content;
+}
+
+.titlefont {
+  margin-left:350px;
 }
 
 .button {
   float: right;
-  align-items:center;
-  vertical-align: middle;
+  align-items: baseline;
+  color: grey;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .legend {
@@ -41,16 +49,27 @@ html {
   width: 250px;
 }
 
-.logo {
+.profile {
+  max-width: 5px;
+  max-height: 5px;
+  float:right;
+  margin-right: 200px;
+}
+
+.img {
   max-height:30px;
   max-width:30px;
   float:left;
   margin-right:-10px;
   margin-bottom:10px;
-  vertical-align: middle;
+  margin-top:-20px
 
 }
 
 .submit {
   font-family: 'Times New Roman', Times, serif;
+}
+
+.ul {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
