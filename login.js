@@ -1,36 +1,18 @@
-var fs = require('fs');
-const path = require('path');
-
 const loginForm = document.getElementById("login-form");
-loginForm.submit.addEventListener("click", (e) => {
+function myfunc() {
+    alert("test");
     const username = loginForm.username.value;
     const password = loginForm.password.value;
     const userdata = {};
     var users = "/users";
     var found = false;
-    fs.readdir(users, (err, files) => {
-        if (err) throw err;
-        var filepath;
-        files.forEach(file => {
-            if(!found){
-                filepath = path.join(users, file);
-                if(file === username){
-                    found = true;
-                    fs.readFile(filepath, 'utf8', (err, contents) => {
-                        if (err) throw err;
-                        userdata = JSON.parse(contents);
-                    });
-                }
-            }
-        });
-      });
-    e.preventDefault();
+    event.preventDefault();
     if(!found){
         alert("User not found.")
     }
-    else if (password === userdata.psw) {
+    else if (password == "testpsw" && username == "admin") {
         location.replace("/dashboard.html?type=" + userdata.tp + "&user=" + username);     
     } else {
         alert("Incorrect credentials.");
     }
-})
+}

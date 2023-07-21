@@ -1,36 +1,47 @@
-var fs = require('fs');
-const path = require('path');
+var usernameobj;
+var passwordobj;
+var confirmobj;
+var typeobj;
+const userdata = {};
 
-document.open();
+window.onload = function () {
+    usernameobj = document.getElementById('username');
+    passwordobj = document.getElementById('password');
+    confirmobj = document.getElementById('confirm');
+    typeobj = document.getElementById('typeselect');
+};
 
-const signupform = document.getElementById("signup-form");
+const signupform = document.getElementById('signup-form');
 
-signupform.submit.addEventListener("click", (e) => {
-    const username = signupform.username.value;
-    const password = signupform.password.value;
-    const confirm = signupform.confirm.value;
-    const type = signupform.typeselect.value;
-    const userdata = {};
-    if(type == ""){
-        alert("please select a user type")
-    }
-    else if(confirm === password){
-        userdata.psw = password;
-        userdata.user = username;
-        userdata.tp = type;
-        var users = "/users";
-        if(!fs.existsSync(users + username)){
-            fs.writeFile(users + username, JSON.stringify(userdata), function(err){
-                if (err) throw err;
-                alert("account created successfully");
-                location.replace("/dashboard.html?type=" + userdata.tp + "&user=" + username);  
-            });
+signupform.addEventListener('submit', 
+    function (event){ 
+        event.preventDefault(); 
+        var username = usernameobj.value;
+        var password = passwordobj.value;
+        var confirm = confirmobj.value;
+        var type = typeobj.value;
+        alert("test");
+        if(type == ''){
+            alert("please select a user type")
+        }
+        else if(confirm === password){
+            userdata.psw = password;
+            userdata.user = username;
+            userdata.tp = type;
+            var users = "/users";
+            if(!fs.existsSync(users + username)){
+                fs.writeFile(users + username, JSON.stringify(userdata), function(err){
+                    if (err) throw err;
+                    alert("account created successfully");
+                    location.replace("/dashboard.html?type=" + userdata.tp + "&user=" + username);  
+                });
+            }
+            else{
+                alert("username used already.")
+            }
         }
         else{
-            alert("username used already.")
+            alert("passwords do not match.")
         }
     }
-    else{
-        alert("passwords do not match.")
-    }
-})
+);
