@@ -26,15 +26,44 @@
         </div>
 
     </head>
-        <div id="main">
+        <div class="main">
             <div id="maintitle">
-
+                <h3>Welcome back, user: admin</h3>
             </div>
-
+            <br>
+            <div id="maintitle">
+                Donations Log:
+            </div>
+            <div class="item">
+                Donating 50kg of Flour to Vaughan Center.
+            </div>
+            <div class="item">
+                Donating 50kg of Flour to Brampton Center.
+            </div>
+            <div class="item">
+                Donating 50kg of Flour to Oakville Center.
+            </div>
+            <div class="item">
+                
+            </div>
         </div>
         <div id="new">
-            
+            <form id="form">
+                <legend><h3>Make New Donation:</h3></legend>
+                <label name="mass">Enter mass:</label>
+                <input type="text" id = "mass" placeholder="100kg"><br>
+                <label name="item">Enter item:</label>
+                <input type="text" id = "item" placeholder="bread"><br>
+                <label name="mass">Enter Center:</label>
+                <select name="typeselect" id="select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="provider">Brampton Center</option>
+                    <option value="provider">Oakville Center</option>
+                    <option value="provider">Mississauga Center</option>
+                    <option value="reciever">Vaughan Center</option>
+            </form>
         </div>
+
     </body>
 
 </html>

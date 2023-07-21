@@ -66,3 +66,8 @@ html {
 .ul {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+#maintitle {
+  font-size: larger;
+  font: bold;
+}
