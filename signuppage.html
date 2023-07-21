@@ -29,17 +29,22 @@
         <br>
         <br>
         <hr>
-        <div class ="form">
+        <div class ="form" id="signup-form">
             <center><form>
                 <legend><h3>Sign-Up Page:</h3></legend>
                 <label name="username">Enter your Email Address :</label>
-                <input type="text" name = "username" placeholder="example@email.com"><br>
+                <input type="text" id = "username" placeholder="example@email.com"><br>
                 <label name="password">Enter your Password :</label>
-                <input type="text" name = "password" placeholder="123456"><br>
+                <input type="password" id = "password" placeholder="123456"><br>
                 <label name="password">Confirm your Password :</label>
-                <input type="text" name="password"><br>
+                <input type="password" id="confirm"><br>
+                <select name="typeselect" id="select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="provider">Business/Restaurant</option>
+                    <option value="reciever">Food Bank/Kitchen</option>
+
                 <br>
-                <input type="submit" class="submit" name="submit">
+                <input type="submit" class="submit" id="submit">
                 
             </form></center>
         </div>

@@ -2,8 +2,7 @@ var fs = require('fs');
 const path = require('path');
 
 const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
-loginButton.addEventListener("click", (e) => {
+loginForm.submit.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
     const userdata = {};
@@ -30,7 +29,7 @@ loginButton.addEventListener("click", (e) => {
         alert("User not found.")
     }
     else if (password === userdata.psw) {
-        //send to dashboard;        
+        location.replace("/dashboard.html?type=" + userdata.tp + "&user=" + username);     
     } else {
         alert("Incorrect credentials.");
     }

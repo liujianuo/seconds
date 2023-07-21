@@ -3,24 +3,27 @@ const path = require('path');
 
 document.open();
 
-const signupform = document.getElementById("form");
-const signupbutton = document.getElementById("button");
+const signupform = document.getElementById("signup-form");
 
-loginButton.addEventListener("click", (e) => {
+signupform.submit.addEventListener("click", (e) => {
     const username = signupform.username.value;
     const password = signupform.password.value;
-    const confirm = signupform.pswconfirm.value;
-    const type = signupform.type.value;
+    const confirm = signupform.confirm.value;
+    const type = signupform.typeselect.value;
     const userdata = {};
-    if(confirm === password){
+    if(type == ""){
+        alert("please select a user type")
+    }
+    else if(confirm === password){
         userdata.psw = password;
         userdata.user = username;
+        userdata.tp = type;
         var users = "/users";
         if(!fs.existsSync(users + username)){
             fs.writeFile(users + username, JSON.stringify(userdata), function(err){
                 if (err) throw err;
                 alert("account created successfully");
-                //send to dashboard
+                location.replace("/dashboard.html?type=" + userdata.tp + "&user=" + username);  
             });
         }
         else{
