@@ -1,26 +1,56 @@
 html {
-    font-family:cursive;
+  font-family:'Times New Roman', Times, serif;
 }
-.header {
-  background:bisque;
-  margin:auto;
-  padding:0%;
-}
-.button {
-    float: right;
-    align-items: right;
-}
-.titlefont {
-    font-size: 55px;
-    font-family:cursive;
-    color:rgb(22, 22, 22);
-    display:inline;
+
+.body {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height:100vh
   
-  }
-.img {
-  vertical-align:middle;
+}
+
+.header {
+  background-color: rgb(2, 7, 40);
+  padding: 0%;
+  font-size: 55px;
+  font-family:cursive;
+  color:rgb(240, 240, 240);
+  top:0;
+  max-width: inherit;
+  text-align: center;
+  height: fit-content;
+}
+
+.button {
+  float: right;
+  align-items:center;
+  vertical-align: middle;
+}
+
+.legend {
+  text-align:center;
+}
+
+.form{
+  align-items: center;
+  margin: auto;
+  width: 250px;
+}
+
+.logo {
+  max-height:30px;
+  max-width:30px;
+  float:left;
+  margin-right:-10px;
+  margin-bottom:10px;
+  vertical-align: middle;
 
 }
-.body {
-  padding:0%;
+
+.submit {
+  font-family: 'Times New Roman', Times, serif;
 }
