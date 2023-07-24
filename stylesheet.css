@@ -16,7 +16,7 @@ html {
 .head {
   background-color: rgb(2, 7, 40);
   padding: 0%;
-  font-size: 60px;
+  font-size: 50px;
   font-family:cursive;
   margin-left:-10px;
   margin-right:-10px;
@@ -30,6 +30,7 @@ html {
 
 .titlefont {
   margin-left:350px;
+  font-size:50px;
 }
 
 .button {

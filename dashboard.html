@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
     <meta name="special thanks" content="Thank you Emma Xing, our lead coder and the clutch of the group! jk :)">
-    <title>Seconds? loginPage</title>
+    <title>Seconds? Dashboard</title>
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="logo.png">
     <head>
         <div class="head">
             <div class="logo">
-                <a href="http://127.0.0.1:5500/homepage.html"><img src = "Logo.png"></a>
+                <a href="homepage.html"><img src = "Logo.png"></a>
             </div>
             <div class="button">
-                <button type="button" onclick="window.location.href='http://127.0.0.1:5500/donations.html'">
+                <button type="button" onclick="window.location.href='donations.html'">
                     Donate
                 </button>
-                <button onclick="window.location.href='http://127.0.0.1:5500/signuppage.html'">
+                <button onclick="window.location.href='signuppage.html'">
                     Sign-up
                 </button>  
-                <button type="button" onclick="window.location.href='http://127.0.0.1:5500/Locations.html'">
+                <button type="button" onclick="window.location.href='Locations.html'">
                     Find a Location
                 </button><br>
-                <button class="driverbutton" type="button" onclick="window.location.href='http://127.0.0.1:5500/driver.html'">
+                <button class="driverbutton" type="button" onclick="window.location.href='driver.html'">
                     Become a Driver
                 </button>
                 <button class="driverbutton" style="margin-right: 10px" type="button" onclick="window.location.href='https://www.instagram.com/seconds_canada/?hl=en'">Contact Us</button>
@@ -29,10 +29,12 @@
             <div class="titlefont">
                 <span><center>Seconds?</center></span>
                 <br>
+                <br>
             </div>
         </div>
 
     </head>
+    <body>
         <div class="main">
             <div id="maintitle">
                 <h3>Welcome back, user: admin</h3>
@@ -54,7 +56,6 @@
                 
             </div>
         </div>
-        <div id="new">
             <form id="form">
                 <legend><h3>Make New Donation:</h3></legend>
                 <label name="mass">Enter mass:</label>
@@ -68,9 +69,10 @@
                     <option value="provider">Oakville Centre</option>
                     <option value="provider">Mississauga Centre</option>
                     <option value="reciever">Vaughan Centre</option><br>
+                </select><br>
 
             </form>
-        </div>
+            <button type="button" onclick="window.location.href='orderconfirm.html'">Proceed to Checkout</button>
 
     </body>
 
