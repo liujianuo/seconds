@@ -49,14 +49,23 @@ html {
   width: 250px;
 }
 
-.img {
-  max-height:30px;
-  max-width:30px;
+.logo {
+  height:20px;
+  width:20px;
   float:left;
   margin-right:-10px;
   margin-bottom:10px;
-  margin-top:-20px
 
+}
+
+.map{
+  border-image-source: url(map.png);
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.h2 {
+  font: bold;
 }
 
 .submit {
@@ -67,7 +76,7 @@ html {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#maintitle {
+.maintitle {
   font-size: larger;
   font: bold;
 }
