@@ -80,3 +80,17 @@ html {
   font-size: larger;
   font: bold;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.driverbutton {
+  float: right;
+}
+
+.bold {
+  font-style: bold;
+}
